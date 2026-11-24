@@ -6,6 +6,20 @@ DSH 插件（Cordis bundle）：在 DSH Web GUI 里用一个面板直观地管�
 - 文件：常用位置 + 盘符（含占用条）、面包屑、Ctrl/Shift 多选、双击打开、右键菜单（打开 / 在资源管理器中定位 / 复制路径 / 重命名 / 删除进回收站 / 统计文件夹大小）、新建文件夹、按名搜索。
 - 应用：读注册表 Uninstall 键（HKLM 64/32 位 + HKCU），显示版本、发布者、安装日期、体积、范围，支持启动 / 打开安装位置 / 卸载（调原厂卸载器）。
 
+## 从 GitHub 安装
+
+仓库：<https://github.com/yangfb2024-ship-it/dsh-file-app-manager>
+
+```powershell
+# 1. 克隆到任意目录
+git clone https://github.com/yangfb2024-ship-it/dsh-file-app-manager.git C:\plugins\dsh-file-app-manager
+
+# 2. 链接进 profile 的 node_modules
+cmd /c mklink /J "%USERPROFILE%\.dsh\profiles\desktop\node_modules\dsh-file-app-manager" "C:\plugins\dsh-file-app-manager"
+```
+
+再按下面「安装（桌面版 profile）」第 2 步，把包名加进 profile 的 `dependencies` 与 `dsh.profile.bundles` 即可。宿主半端会热加载，刷新页面就能看到侧栏面板。
+
 ## 结构
 
 | 路径 | 作用 |
