@@ -1,0 +1,7 @@
+﻿# dsh-file-app-manager bundle patch: inserts this plugin into a profile's
+# layer stack. One row: the host half (lib/index.js) registers the local
+# files/apps RPC route; package.json's dsh.client makes the web app load
+# lib/client.js as the browser half (sidebar entry + main panel).
+- insert:
+    - id: dsh-file-app-manager
+      name: 'dsh-file-app-manager'
